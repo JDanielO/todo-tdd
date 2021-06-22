@@ -10,6 +10,6 @@ const TodoSchema = new mongoose.Schema({
     }
 })
 
-const ToDoModel = mongoose.model("Todo", ToDoSchema);
+const ToDoModel = mongoose.model("Todo", TodoSchema);
 
 module.exports = ToDoModel;
