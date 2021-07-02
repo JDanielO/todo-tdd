@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const keys = require("../config/keys");
 
 async function connect() {
   try {
-    await mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+    await mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
   } catch (err) {
     console.log("Error Connecting to mongodb");
     console.log(err);
